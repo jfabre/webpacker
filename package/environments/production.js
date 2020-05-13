@@ -50,7 +50,8 @@ module.exports = class extends Base {
           new TerserPlugin({
             parallel: 1,
             cache: true,
-            sourceMap: true,
+            sourceMap: false,
+            extractComments: false,
             terserOptions: {
               parse: {
                 // Let terser parse ecma 8 code but always output
@@ -61,6 +62,8 @@ module.exports = class extends Base {
                 ecma: 5,
                 warnings: false,
                 comparisons: false
+                inline: 2,
+                drop_console: true
               },
               mangle: {
                 safari10: true
