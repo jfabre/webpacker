@@ -48,7 +48,7 @@ module.exports = class extends Base {
       optimization: {
         minimizer: [
           new TerserPlugin({
-            parallel: true,
+            parallel: 2,
             cache: true,
             sourceMap: true,
             terserOptions: {
