@@ -50,7 +50,7 @@ module.exports = class extends Base {
           new TerserPlugin({
             parallel: 1,
             cache: true,
-            sourceMap: false,
+            sourceMap: true,
             extractComments: false,
             terserOptions: {
               parse: {
